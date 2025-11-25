@@ -87,6 +87,48 @@
         <button type="submit">Send</button>
     </form>
 
+    <!-- Additional important tags -->
+    <section aria-labelledby="media-heading">
+        <h2 id="media-heading">Media Examples</h2>
+
+        <h3>Video</h3>
+        <video controls width="320">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h3>Audio</h3>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Canvas</h3>
+        <canvas id="myCanvas" width="300" height="100">Your browser does not support the canvas element.</canvas>
+
+        <h3>Expandable Details</h3>
+        <details>
+            <summary>More information</summary>
+            <p>This content is hidden until the user expands the details element.</p>
+        </details>
+
+        <h3>Time</h3>
+        <p>Document last updated: <time datetime="2025-11-26">November 26, 2025</time></p>
+    </section>
+
+    <script>
+        (function(){
+            var c = document.getElementById('myCanvas');
+            if (!c) return;
+            var ctx = c.getContext('2d');
+            ctx.fillStyle = '#f0f0f0';
+            ctx.fillRect(0,0,c.width,c.height);
+            ctx.fillStyle = '#333';
+            ctx.font = '16px Arial';
+            ctx.fillText('Canvas demo', 10, 50);
+        })();
+    </script>
+
     <footer>
         <p>&copy; 2025 My First Project</p>
     </footer>
